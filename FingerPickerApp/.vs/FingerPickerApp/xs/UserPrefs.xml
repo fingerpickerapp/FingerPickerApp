@@ -1,12 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/Finger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/touch.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="FingerPickerApp/Finger.cs" Line="18" Column="9" />
-=======
-      <File FileName="FingerPickerApp/Class1.cs" Line="9" Column="17" />
-      <File FileName="FingerPickerApp Status" />
->>>>>>> c45900da5c4883d339b15ac40c6154f2563bfd79
+      <File FileName="FingerPickerApp/Finger.cs" Line="45" Column="33" />
+      <File FileName="FingerPickerApp/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp/touch.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

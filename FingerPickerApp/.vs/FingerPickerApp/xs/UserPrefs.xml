@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{ABD89025-F853-4F08-85F3-C67AD2D8ABE0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/MainPage.xaml">
+    <Files>
+      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp/MainPage.xaml" Line="4" Column="59" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android FirstBuild="True" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
@@ -20,8 +21,20 @@ namespace FingerPickerApp.Droid
             LoadApplication(new App());
 
             Finger finger = new Finger(10,10,10,"Black");
+            Finger finger2 = new Finger(15,15,20,"Red");
+            Finger finger3 = new Finger(20, 20, 30, "Red");
 
-            Console.WriteLine("finger picker X = " + finger.getFingerX());
+            ArrayList fingers = new ArrayList();
+
+            fingers.Add(finger);
+            fingers.Add(finger2);
+            fingers.Add(finger3);
+
+            for(int i = 0; i < fingers.Count; i++)
+            {
+                Console.WriteLine("finger picker X " + i + " = " + finger.getFingerX());
+            }
+
         }
     }
 }

@@ -1,6 +1,9 @@
 FingerPickerApp
-System.Runtime
 FormsViewGroup
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms
+System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime

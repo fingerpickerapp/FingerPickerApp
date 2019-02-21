@@ -3409,9 +3409,9 @@ containing a value of this type.
         public static int line3=0x7f090018;
         public static int listMode=0x7f09001d;
         public static int list_item=0x7f090061;
-        public static int masked=0x7f0900ca;
+        public static int masked=0x7f0900c8;
         public static int media_actions=0x7f0900b9;
-        public static int message=0x7f0900c8;
+        public static int message=0x7f0900c6;
         public static int middle=0x7f090031;
         public static int mini=0x7f090053;
         public static int mr_art=0x7f0900a5;
@@ -3481,7 +3481,6 @@ containing a value of this type.
         public static int showCustom=0x7f090023;
         public static int showHome=0x7f090024;
         public static int showTitle=0x7f090025;
-        public static int sliding_tabs=0x7f0900c6;
         public static int smallLabel=0x7f09008b;
         public static int snackbar_action=0x7f090092;
         public static int snackbar_text=0x7f090091;
@@ -3508,7 +3507,6 @@ containing a value of this type.
         public static int title=0x7f09001c;
         public static int titleDividerNoCustom=0x7f090071;
         public static int title_template=0x7f09006f;
-        public static int toolbar=0x7f0900c7;
         public static int top=0x7f09003e;
         public static int topPanel=0x7f09006e;
         public static int touch_outside=0x7f09008f;
@@ -3521,7 +3519,7 @@ containing a value of this type.
         public static int up=0x7f090009;
         public static int useLogo=0x7f090026;
         public static int view_offset_helper=0x7f090016;
-        public static int visible=0x7f0900c9;
+        public static int visible=0x7f0900c7;
         public static int volume_item_container=0x7f0900ab;
         public static int withText=0x7f09003c;
         public static int wrap_content=0x7f09002e;
@@ -3611,9 +3609,7 @@ containing a value of this type.
         public static int select_dialog_multichoice_material=0x7f04003e;
         public static int select_dialog_singlechoice_material=0x7f04003f;
         public static int support_simple_spinner_dropdown_item=0x7f040040;
-        public static int tabbar=0x7f040041;
-        public static int toolbar=0x7f040042;
-        public static int tooltip=0x7f040043;
+        public static int tooltip=0x7f040041;
     }
     public static final class mipmap {
         public static int icon=0x7f030000;

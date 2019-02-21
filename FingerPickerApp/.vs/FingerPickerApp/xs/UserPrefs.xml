@@ -9,20 +9,10 @@
       <File FileName="FingerPickerApp/Finger.cs" Line="11" Column="77" />
       <File FileName="FingerPickerApp.Android/FingerPickerApp.Android.csproj" Line="4" Column="70" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="FingerPickerApp" expanded="True" selected="True">
-            <Node name="FingerPickerApp" expanded="True" />
-            <Node name="FingerPickerApp.Android" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.visualstudiodevice" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

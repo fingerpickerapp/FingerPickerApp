@@ -940,20 +940,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/qasimak/.nuget/packages/": {}
+    "/Users/Aksa08/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
+      "projectUniqueName": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
       "projectName": "FingerPickerApp.Android",
-      "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
-      "packagesPath": "/Users/qasimak/.nuget/packages/",
-      "outputPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/",
+      "projectPath": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
+      "packagesPath": "/Users/Aksa08/.nuget/packages/",
+      "outputPath": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj",
       "projectStyle": "PackageReference",
-      "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/qasimak/.config/NuGet/NuGet.Config"
+        "/Users/Aksa08/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid81"
@@ -964,8 +963,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
-              "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
+            "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
+              "projectPath": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
             }
           }
         }

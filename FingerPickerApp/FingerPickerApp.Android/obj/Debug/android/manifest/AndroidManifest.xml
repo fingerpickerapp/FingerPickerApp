@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.mmu.professionaldevelopment.FingerPickerApp">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+  <uses-configuration android:reqTouchScreen="finger" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <application android:label="FingerPickerApp.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="FingerPickerApp" android:theme="@style/MainTheme" android:name="md51f41615766b6b9275abf4d905d414f1f.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="FingerPaint" android:theme="@style/MainTheme" android:name="md51f41615766b6b9275abf4d905d414f1f.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

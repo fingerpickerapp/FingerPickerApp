@@ -995,19 +995,20 @@
     ]
   },
   "packageFolders": {
-    "/Users/Aksa08/.nuget/packages/": {}
+    "/Users/qasimak/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
+      "projectUniqueName": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
       "projectName": "FingerPickerApp.iOS",
-      "projectPath": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
-      "packagesPath": "/Users/Aksa08/.nuget/packages/",
-      "outputPath": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj",
+      "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
+      "packagesPath": "/Users/qasimak/.nuget/packages/",
+      "outputPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/",
       "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
       "configFilePaths": [
-        "/Users/Aksa08/.config/NuGet/NuGet.Config"
+        "/Users/qasimak/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
@@ -1018,8 +1019,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
-              "projectPath": "/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
+            "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
+              "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
             }
           }
         }

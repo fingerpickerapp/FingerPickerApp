@@ -77,11 +77,11 @@
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/mipmap-xxhdpi/launcher_foreground.png
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/mipmap-xxxhdpi/launcher_foreground.png
-/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/layout/tabbar.xml
-/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/layout/toolbar.xml
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/R.cs.flag
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/R.txt
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/uploadflags.txt
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/layout/tabbar.xml
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/res/layout/toolbar.xml
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/FingerPickerApp.Android.pdb
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/FingerPickerApp.pdb
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Mono.Android.pdb

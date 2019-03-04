@@ -4,11 +4,11 @@ namespace FingerPickerApp
     public class Finger
     {
         private int fingerId;
-        private int fingerX;
-        private int fingerY;
+        private double fingerX;
+        private double fingerY;
         private String fingerColour;
 
-        public Finger(int fingerId, int fingerX, int fingerY, String fingerColour)
+        public Finger(int fingerId, double fingerX, double fingerY, String fingerColour)
         {
             this.fingerId = fingerId;
             this.fingerX = fingerX;
@@ -26,22 +26,22 @@ namespace FingerPickerApp
             return fingerId;
         }
 
-        public void setFingerX(int fingerX)
+        public void setFingerX(double fingerX)
         {
             this.fingerX = fingerX;
         }
 
-        public int getFingerX()
+        public double getFingerX()
         {
             return fingerX;
         }
 
-        public void setFingerY(int fingerY)
+        public void setFingerY(double fingerY)
         {
             this.fingerY = fingerY;
         }
 
-        public int getFingerY()
+        public double getFingerY()
         {
             return fingerY; 
         }

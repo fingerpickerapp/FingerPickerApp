@@ -1,18 +1,45 @@
-﻿<Properties StartupConfiguration="{ABD89025-F853-4F08-85F3-C67AD2D8ABE0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp.Android/MainActivity.cs">
+﻿<Properties StartupConfiguration="{4232744F-9CBE-4A5D-8389-27A4756ED9C9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp.iOS/TouchRecognizer.cs">
     <Files>
-      <File FileName="FingerPickerApp.Android/MainActivity.cs" Line="11" Column="30" />
-      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="36" Column="58" />
-      <File FileName="FingerPickerApp/MainPage.xaml" Line="9" Column="24" />
+      <File FileName="../../../../BitbucketProjects/fingerpaint/FingerPaint/FingerPaint/TouchActionType.cs" Line="3" Column="17" />
+      <File FileName="../../../../BitbucketProjects/fingerpaint/FingerPaint/FingerPaint/MainPage.xaml.cs" Line="89" Column="47" />
+      <File FileName="../../../../BitbucketProjects/fingerpaint/FingerPaint/FingerPaint.Android/TouchEffect.cs" Line="86" Column="59" />
+      <File FileName="../../../../BitbucketProjects/fingerpaint/FingerPaint/FingerPaint/Finger.cs" Line="25" Column="10" />
+      <File FileName="../../../../Projects/Clock/Clock/MainPage.xaml.cs" Line="55" Column="1" />
+      <File FileName="FingerPickerApp/MainPage.xaml" Line="6" Column="56" />
+      <File FileName="FingerPickerApp/Finger.cs" Line="1" Column="1" />
       <File FileName="FingerPickerApp/App.xaml" Line="5" Column="15" />
-      <File FileName="FingerPickerApp/App.xaml.cs" Line="14" Column="38" />
-      <File FileName="FingerPickerApp/Finger.cs" Line="11" Column="77" />
-      <File FileName="FingerPickerApp.Android/FingerPickerApp.Android.csproj" Line="4" Column="70" />
+      <File FileName="FingerPickerApp/App.xaml.cs" Line="6" Column="26" />
+      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="13" Column="26" />
+      <File FileName="FingerPickerApp.Android/MainActivity.cs" Line="26" Column="2" />
+      <File FileName="FingerPickerApp.iOS/Main.cs" Line="19" Column="6" />
+      <File FileName="FingerPickerApp.iOS/TouchEffect.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp.Android/TouchEffect.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp.iOS/AppDelegate.cs" Line="14" Column="23" />
+      <File FileName="FingerPickerApp.iOS/Entitlements.plist" />
+      <File FileName="FingerPickerApp.iOS/Info.plist" />
+      <File FileName="FingerPickerApp.iOS/TouchRecognizer.cs" Line="170" Column="21" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FingerPickerApp" expanded="True">
+            <Node name="FingerPickerApp" expanded="True">
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="FingerPickerApp.Android" expanded="True" />
+            <Node name="FingerPickerApp.iOS" expanded="True">
+              <Node name="TouchRecognizer.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.visualstudiodevice" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.96C93F4B-E669-4F89-A542-ABACCEF13FF9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

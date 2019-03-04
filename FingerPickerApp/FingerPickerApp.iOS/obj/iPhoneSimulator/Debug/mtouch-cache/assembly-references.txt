@@ -23,7 +23,6 @@
 /Users/qasimak/.nuget/packages/xamarin.forms/3.3.0.967583/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.dll
 /Users/qasimak/.nuget/packages/xamarin.forms/3.3.0.967583/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
-/Users/qasimak/.nuget/packages/skiasharp/1.68.0/lib/Xamarin.iOS/SkiaSharp.dll
 /Users/qasimak/.nuget/packages/skiasharp.views.forms/1.68.0/lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll
 /Users/qasimak/.nuget/packages/skiasharp.views/1.68.0/lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/12.2.1.15/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll
+/Users/qasimak/.nuget/packages/skiasharp/1.68.0/lib/Xamarin.iOS/SkiaSharp.dll

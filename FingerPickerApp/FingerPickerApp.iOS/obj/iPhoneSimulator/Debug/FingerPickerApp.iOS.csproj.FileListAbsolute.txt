@@ -58,3 +58,9 @@
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/FingerPickerApp.iOS.csproj.CopyComplete
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/FingerPickerApp.iOS.exe
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/FingerPickerApp.iOS.pdb
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.4-12.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.4-12.1/actool/_PartialAppManifest.items
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.4-12.1/actool/_BundleResourceWithLogicalName.items
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.4-12.1/coremlc/_PartialAppManifest.items
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.4-12.1/coremlc/_BundleResourceWithLogicalName.items
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone11.4-12.1/optimized/

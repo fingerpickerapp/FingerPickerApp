@@ -78,9 +78,16 @@ namespace FingerPickerApp
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
+        
+        //******To Do List******//
+        
+        //When a finger is removed- remove touch
+        //circle moves when finger moves - update x/y positions of finger
+        //check id issue
 
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 4");
             //choose random 3 numbers to assign for colour
+            //**If you's can find a better way to assign colours- go for it, I did this in 10mins//**
             int randomNumber = random.Next(70, 255);
             int randomNumber1 = random.Next(70, 255);
             int randomNumber2 = random.Next(70, 255);
@@ -89,6 +96,7 @@ namespace FingerPickerApp
             {
 
                 case TouchActionType.Pressed:
+                //**Sometimes same id's are assigned - checked this on Omar's phone and this then messes up when a finger is chosen**//
 
                     Finger finger = new Finger((int)args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
                     fingers.Add(finger);
@@ -161,6 +169,8 @@ namespace FingerPickerApp
             }
 
          //   Console.WriteLine(t);
+         
+         //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
             if (a>=5.999999)
             {
 

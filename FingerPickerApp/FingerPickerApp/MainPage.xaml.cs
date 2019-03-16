@@ -9,11 +9,28 @@ using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System.IO;
 using FingerPickerApp;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace FingerPickerApp
 {
     public partial class MainPage : ContentPage
     {
+        Random random = new Random();
+
+
+
+        const double cycleTime = 1000;     
+
+        Stopwatch stopwatch = new Stopwatch();
+        Stopwatch choose = new Stopwatch();
+
+        bool pageIsActive;
+
+        float t;
+        float a;
+
         Dictionary<long, SKPath> inProgressPaths = new Dictionary<long, SKPath>();
         List<SKPath> completedPaths = new List<SKPath>();
         List<Finger> fingers = new List<Finger>();
@@ -21,7 +38,7 @@ namespace FingerPickerApp
         SKPaint paint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
-            Color = SKColors.Blue,
+            Color = SKColors.Red,
             StrokeWidth = 10,
             StrokeCap = SKStrokeCap.Round,
             StrokeJoin = SKStrokeJoin.Round
@@ -32,28 +49,65 @@ namespace FingerPickerApp
             InitializeComponent();
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 3");
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            pageIsActive = true;
+
+            //animation timer
+            stopwatch.Start();
+
+            //timer starts for finger choosing
+            choose.Start();
+
+            Device.StartTimer(TimeSpan.FromMilliseconds(20), () =>
+            {
+                t = (float)(stopwatch.Elapsed.TotalMilliseconds % cycleTime / cycleTime);
+                canvasView.InvalidateSurface();
+
+                 a = (float)(choose.Elapsed.TotalSeconds);
+
+                if (!pageIsActive)
+                {
+                    choose.Stop();
+                }
+                return pageIsActive;
+            });
+        }
+      
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
+
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 4");
+            //choose random 3 numbers to assign for colour
+            int randomNumber = random.Next(70, 255);
+            int randomNumber1 = random.Next(70, 255);
+            int randomNumber2 = random.Next(70, 255);
 
             switch (args.Type)
             {
+
                 case TouchActionType.Pressed:
-                    Finger finger = new Finger((int) args.Id,args.LocationX, args.LocationY, "White");
+
+                    Finger finger = new Finger((int)args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
                     fingers.Add(finger);
+                    Console.WriteLine(args.IsInContact);
                     canvasView.InvalidateSurface();
-                    Console.WriteLine("fingerX = " + finger.getFingerX() + " fingerY = " + finger.getFingerY());
+                    Console.WriteLine(args.Id);
+                    //  Console.WriteLine((int)args.Id+"fingerX = " + finger.getFingerX() + " fingerY = " + finger.getFingerY());
                     //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< args.id = " + args.Id);
                     break;
 
                 case TouchActionType.Moved:
+
+
                     if (inProgressPaths.ContainsKey(args.Id))
                     {
-                        //SKPath path = inProgressPaths[args.Id];
-                       //path.LineTo(ConvertToPixel(args.Location));
-                        //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< location" + args.Location.X);
-                        //Console.WriteLine("This is what locations consists of = <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" + args.Location);
+                        SKPath path = inProgressPaths[args.Id];
+                        // path.LineTo(ConvertToPixel(args.Location));
+                        //   Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< location" + args.Location.X);
+                        // Console.WriteLine("This is what locations consists of = <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" + args.Location);
 
                         canvasView.InvalidateSurface();
                     }
@@ -61,11 +115,12 @@ namespace FingerPickerApp
 
                 case TouchActionType.Released:
                     Console.WriteLine(args.Id);
-                    
-                    fingers.RemoveAt((int) args.Id);
+
+
+                    //  fingers.RemoveAt((int)args.Id);
                     for (int i = 0; i < fingers.Count; i++)
                     {
-                        Console.WriteLine("This is me = " + fingers[i]);
+                        //      Console.WriteLine("This is me = " + fingers[i]);
                     }
                     break;
 
@@ -81,27 +136,66 @@ namespace FingerPickerApp
 
         void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            SKCanvas canvas = args.Surface.Canvas;
+            SKImageInfo info = args.Info;
+            SKSurface surface = args.Surface;
+            SKCanvas canvas = surface.Canvas;
+
             canvas.Clear();
+            SKPoint center = new SKPoint(info.Width / 2, info.Height / 2);
+            float baseRadius = Math.Min(info.Width, info.Height) / 12;
 
-            foreach (Finger finger in fingers)
-            {
-                Console.WriteLine("fingerX = " + finger.getFingerX() + " fingerY = " + finger.getFingerY());
-                canvas.DrawCircle((float) finger.getFingerX(), (float) finger.getFingerY(), 100, paint);
-                canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 85, paint);
-                canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 70, paint);
+                foreach (Finger finger in fingers)
+                {
+                for (int circle = 0; circle < 1; circle++)
+                {
+                    float radius = baseRadius * (circle + t);
 
+                    paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
+                    paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
+                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 89, paint);
+
+
+                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+
+                }
             }
 
-            foreach (SKPath path in inProgressPaths.Values)
+         //   Console.WriteLine(t);
+            if (a>=5.999999)
             {
-                canvas.DrawPath(path, paint);
+
+                //after 6 seconds clear canvas
+                canvas.Clear();
+                //randoml choose a finger from list
+                int r = random.Next(fingers.Count);
+
+                var finger = fingers[r];
+                //get the finger id of the randomly chosen finger
+                var finger_id = finger.getFingerId();
+
+                //predicate to remove every finger in the list except from chosen finger
+                fingers.RemoveAll(Finger => Finger.getFingerId() != finger_id);
+
+                //loop to draw the chosen circle again 
+                for (int circle = 0; circle < 1; circle++)
+                {
+                    float radius = baseRadius * (circle + t);
+
+                    paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
+                    paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
+                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+
+                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                }
             }
-        }
-        SKPoint ConvertToPixel(Point pt)
-        {
-            return new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                               (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
-        }
+            }
+            }
     }
-}
+
+
+
+
+             
+        
+    
+

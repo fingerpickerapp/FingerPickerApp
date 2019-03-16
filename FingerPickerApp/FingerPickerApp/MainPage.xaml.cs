@@ -84,6 +84,8 @@ namespace FingerPickerApp
         //When a finger is removed- remove touch
         //circle moves when finger moves - update x/y positions of finger
         //check id issue
+        
+        //Restart timer for finger choosing everytime someone touches or removes their finger
 
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 4");
             //choose random 3 numbers to assign for colour

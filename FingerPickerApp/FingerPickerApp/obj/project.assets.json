@@ -466,11 +466,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj",
+      "projectUniqueName": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj",
       "projectName": "FingerPickerApp",
-      "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj",
+      "projectPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj",
       "packagesPath": "/Users/qasimak/.nuget/packages/",
-      "outputPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/",
+      "outputPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

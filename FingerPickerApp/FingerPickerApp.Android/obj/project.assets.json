@@ -945,11 +945,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
+      "projectUniqueName": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
       "projectName": "FingerPickerApp.Android",
-      "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
+      "projectPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/FingerPickerApp.Android.csproj",
       "packagesPath": "/Users/qasimak/.nuget/packages/",
-      "outputPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/",
+      "outputPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -964,8 +964,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
-              "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
+            "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
+              "projectPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
             }
           }
         }

@@ -18,16 +18,14 @@ namespace TouchTracking.Droid
         Element formsElement;
         TouchTracking.TouchEffect libTouchEffect;
         bool capture;
-        Func<double, double> fromPixels;
-        int[] twoIntArray = new int[2];
+        //Func<double, double> fromPixels;
+        //int[] twoIntArray = new int[2];
         float locationX;
         float locationY;
 
-        static Dictionary<Android.Views.View, TouchEffect> viewDictionary = 
-            new Dictionary<Android.Views.View, TouchEffect>();
+        static Dictionary<Android.Views.View, TouchEffect> viewDictionary = new Dictionary<Android.Views.View, TouchEffect>();
 
-        static Dictionary<int, TouchEffect> idToEffectDictionary = 
-            new Dictionary<int, TouchEffect>();
+        static Dictionary<int, TouchEffect> idToEffectDictionary = new Dictionary<int, TouchEffect>();
 
         protected override void OnAttached()
         {
@@ -46,7 +44,7 @@ namespace TouchTracking.Droid
                 libTouchEffect = touchEffect;
 
                 // Save fromPixels function
-                fromPixels = view.Context.FromPixels;
+                //fromPixels = view.Context.FromPixels;
 
                 // Set event handler on View
                 view.Touch += OnTouch;
@@ -70,11 +68,13 @@ namespace TouchTracking.Droid
 
             // Get the pointer index
             int pointerIndex = motionEvent.ActionIndex;
+
+            //Console.WriteLine("POINTER INDEX = " + pointerIndex);
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< pointerIndex = " + pointerIndex );
             // Get the id that identifies a finger over the course of its progress
             int id = motionEvent.GetPointerId(pointerIndex);
 
-            Console.WriteLine("motionx = " + motionEvent.GetX(pointerIndex) + " motiony = " + motionEvent.GetY(pointerIndex));
+            //Console.WriteLine("motionx = " + motionEvent.GetX(pointerIndex) + " motiony = " + motionEvent.GetY(pointerIndex));
 
             locationX = motionEvent.GetX(pointerIndex);
             locationY = motionEvent.GetY(pointerIndex);
@@ -84,10 +84,11 @@ namespace TouchTracking.Droid
 
 
             // Use ActionMasked here rather than Action to reduce the number of possibilities
+            // when the screen is tapped, this line of code runs
             switch (args.Event.ActionMasked)
             {
                 case MotionEventActions.Down:
-                case MotionEventActions.PointerDown:
+                case MotionEventActions.PointerDown: // checks for pointer down
                     FireEvent(this, id, TouchActionType.Pressed, locationX, locationY, true);
 
                     idToEffectDictionary.Add(id, this);
@@ -95,20 +96,27 @@ namespace TouchTracking.Droid
                     capture = libTouchEffect.Capture;
                     break;
 
-                case MotionEventActions.Move:
+               case MotionEventActions.Move:
                     // Multiple Move events are bundled, so handle them in a loop
+
+                    // this line of code runs when the finger is moved.
                     for (pointerIndex = 0; pointerIndex < motionEvent.PointerCount; pointerIndex++)
                     {
+                        // this stores the pointer id of eadh finger until removed from the screen
+                        // when the pointer is removed another finger is placed, the new finger takes the index
+                        // number of the previous finger.
                         id = motionEvent.GetPointerId(pointerIndex);
+
+                        Console.WriteLine("ID = " + id);
 
                         if (capture)
                         {
-                            senderView.GetLocationOnScreen(twoIntArray);
+                            //senderView.GetLocationOnScreen(twoIntArray);
 
                             /*screenPointerCoords = new Point(twoIntArray[0] + motionEvent.GetX(pointerIndex),
                                                             twoIntArray[1] + motionEvent.GetY(pointerIndex));*/
 
-                            FireEvent(this, id, TouchActionType.Moved, locationX, locationY, true);
+                           FireEvent(this, id, TouchActionType.Moved, locationX, locationY, true);
                         }
                         else
                         {
@@ -123,7 +131,7 @@ namespace TouchTracking.Droid
                     break;
 
                 case MotionEventActions.Up:
-                case MotionEventActions.Pointer1Up:
+                case MotionEventActions.PointerUp: // as the finger is removed, this line of code runs
                     if (capture)
                     {
                         FireEvent(this, id, TouchActionType.Released, locationX, locationY, false);
@@ -138,10 +146,16 @@ namespace TouchTracking.Droid
                         }
                     }
                     idToEffectDictionary.Remove(id);
+                    Console.WriteLine("This is id TOEFFECTDICTIONARY = " + idToEffectDictionary.Count);
+                    for(int i = 0; i < idToEffectDictionary.Count; i ++)
+                    {
+                        Console.WriteLine("This is id TOEFFECTDICTIONARY = " + idToEffectDictionary);
+                    }
+
                     break;
 
                 case MotionEventActions.Cancel:
-                    if (capture)
+                    /*if (capture)
                     {
                         FireEvent(this, id, TouchActionType.Cancelled, locationX, locationY, false);
                     }
@@ -152,12 +166,12 @@ namespace TouchTracking.Droid
                             FireEvent(idToEffectDictionary[id], id, TouchActionType.Cancelled, locationX, locationY, false);
                         }
                     }
-                    idToEffectDictionary.Remove(id);
+                    idToEffectDictionary.Remove(id);*/
                     break;
             }
         }
 
-        void CheckForBoundaryHop(int id, Point pointerLocation)
+        /*void CheckForBoundaryHop(int id, Point pointerLocation)
         { 
             TouchEffect touchEffectHit = null;
 
@@ -166,21 +180,21 @@ namespace TouchTracking.Droid
                 // Get the view rectangle
                 try
                 {
-                    view.GetLocationOnScreen(twoIntArray);
+                    //view.GetLocationOnScreen(twoIntArray);
                 }
                 catch // System.ObjectDisposedException: Cannot access a disposed object.
                 {
                     continue;
                 }
-                Rectangle viewRect = new Rectangle(twoIntArray[0], twoIntArray[1], view.Width, view.Height);
+                //Rectangle viewRect = new Rectangle(twoIntArray[0], twoIntArray[1], view.Width, view.Height);
 
-                if (viewRect.Contains(pointerLocation))
+                /*if (viewRect.Contains(pointerLocation))
                 {
                     touchEffectHit = viewDictionary[view];
-                }
-            }
+                }*/
+            //}
 
-            if (touchEffectHit != idToEffectDictionary[id])
+            /*if (touchEffectHit != idToEffectDictionary[id])
             {
                 if (idToEffectDictionary[id] != null)
                 {
@@ -192,7 +206,7 @@ namespace TouchTracking.Droid
                 }
                 idToEffectDictionary[id] = touchEffectHit;
             }
-        }
+        }*/
 
         void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType,float pointX, float pointY, bool isInContact)
         {

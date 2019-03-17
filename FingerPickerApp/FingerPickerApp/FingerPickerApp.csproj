@@ -14,7 +14,4 @@
     <PackageReference Include="SkiaSharp" Version="1.68.0" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="MainPage.xaml.cs" />
-  </ItemGroup>
 </Project>

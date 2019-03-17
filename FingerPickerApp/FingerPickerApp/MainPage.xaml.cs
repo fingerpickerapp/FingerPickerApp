@@ -17,24 +17,35 @@ namespace FingerPickerApp
 {
     public partial class MainPage : ContentPage
     {
+        // instantiate a random object
         Random random = new Random();
 
+        // store value intothe cycletime
+        const double cycleTime = 1000;
 
-
-        const double cycleTime = 1000;     
-
+        // create a stopwatch instance
         Stopwatch stopwatch = new Stopwatch();
+
+        // create another stopwatch instance
         Stopwatch choose = new Stopwatch();
 
+        // cleate a boolean variable
         bool pageIsActive;
 
+        // floats declared
         float t;
         float a;
+        int index;
 
-        Dictionary<long, SKPath> inProgressPaths = new Dictionary<long, SKPath>();
-        List<SKPath> completedPaths = new List<SKPath>();
+
+        // paths declared
+        //Dictionary<long, SKPath> inProgressPaths = new Dictionary<long, SKPath>();
+        // completed paths declared
+        //List<SKPath> completedPaths = new List<SKPath>();
+        // a list of finger objects declared
         List<Finger> fingers = new List<Finger>();
 
+        // paing declared with red colour
         SKPaint paint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
@@ -49,6 +60,8 @@ namespace FingerPickerApp
             InitializeComponent();
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 3");
         }
+
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -65,7 +78,7 @@ namespace FingerPickerApp
                 t = (float)(stopwatch.Elapsed.TotalMilliseconds % cycleTime / cycleTime);
                 canvasView.InvalidateSurface();
 
-                 a = (float)(choose.Elapsed.TotalSeconds);
+                a = (float)(choose.Elapsed.TotalSeconds);
 
                 if (!pageIsActive)
                 {
@@ -74,17 +87,17 @@ namespace FingerPickerApp
                 return pageIsActive;
             });
         }
-      
+
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
-        
-        //******To Do List******//
-        
-        //When a finger is removed- remove touch
-        //circle moves when finger moves - update x/y positions of finger
-        //check id issue
-        //Restart timer for finger choosing everytime someone touches or removes their finger
+
+            //******To Do List******//
+
+            //When a finger is removed- remove touch
+            //circle moves when finger moves - update x/y positions of finger
+            //check id issue
+            //Restart timer for finger choosing everytime someone touches or removes their finger
 
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 4");
             //choose random 3 numbers to assign for colour
@@ -97,10 +110,29 @@ namespace FingerPickerApp
             {
 
                 case TouchActionType.Pressed:
-                //**Sometimes same id's are assigned - checked this on Omar's phone and this then messes up when a finger is chosen**//
+                    //**Sometimes same id's are assigned - checked this on Omar's phone and this then messes up when a finger is chosen**//
+                    index = (int)args.Id;
+                    Finger finger = new Finger(index, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
+                    Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
+                    Console.WriteLine("ARGS.ID = " + args.Id);
+                    Console.WriteLine("THIS FINGER ID = " + index);
+                    if(fingers.Count > index)
+                    {
+                        if (fingers[index] == null)
+                        {
+                            fingers[index] = finger;
+                        }
+                        else
+                        {
+                            fingers.Add(finger);
+                        }
 
-                    Finger finger = new Finger((int)args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
-                    fingers.Add(finger);
+                    }
+                    else
+                    {
+                        fingers.Add(finger);
+                    }
+
                     Console.WriteLine(args.IsInContact);
                     canvasView.InvalidateSurface();
                     Console.WriteLine(args.Id);
@@ -111,7 +143,7 @@ namespace FingerPickerApp
                 case TouchActionType.Moved:
 
 
-                    if (inProgressPaths.ContainsKey(args.Id))
+                    /*if (inProgressPaths.ContainsKey(args.Id))
                     {
                         SKPath path = inProgressPaths[args.Id];
                         // path.LineTo(ConvertToPixel(args.Location));
@@ -119,26 +151,26 @@ namespace FingerPickerApp
                         // Console.WriteLine("This is what locations consists of = <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" + args.Location);
 
                         canvasView.InvalidateSurface();
-                    }
+                    }*/
                     break;
 
                 case TouchActionType.Released:
                     Console.WriteLine(args.Id);
 
-
-                    //  fingers.RemoveAt((int)args.Id);
+                    index = (int) args.Id;
+                    fingers[index] = null;
                     for (int i = 0; i < fingers.Count; i++)
                     {
-                        //      Console.WriteLine("This is me = " + fingers[i]);
+                       
                     }
                     break;
 
                 case TouchActionType.Cancelled:
-                    if (inProgressPaths.ContainsKey(args.Id))
+                    /*if (inProgressPaths.ContainsKey(args.Id))
                     {
                         inProgressPaths.Remove(args.Id);
                         canvasView.InvalidateSurface();
-                    }
+                    }*/
                     break;
             }
         }
@@ -153,25 +185,28 @@ namespace FingerPickerApp
             SKPoint center = new SKPoint(info.Width / 2, info.Height / 2);
             float baseRadius = Math.Min(info.Width, info.Height) / 12;
 
-                foreach (Finger finger in fingers)
+            foreach (Finger finger in fingers)
+            {
+                if(finger != null)
                 {
-                for (int circle = 0; circle < 1; circle++)
-                {
-                    float radius = baseRadius * (circle + t);
+                    for (int circle = 0; circle < 1; circle++)
+                    {
+                        float radius = baseRadius * (circle + t);
 
-                    paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
-                    paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
-                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 89, paint);
+                        paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
+                        paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
+                        canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 89, paint);
 
 
-                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                        canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
 
+                    }
                 }
             }
 
-         //   Console.WriteLine(t);
-         
-         //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
+            //   Console.WriteLine(t);
+
+            //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
             if (a>=5.999999)
             {
 
@@ -182,25 +217,31 @@ namespace FingerPickerApp
 
                 var finger = fingers[r];
                 //get the finger id of the randomly chosen finger
-                var finger_id = finger.getFingerId();
+                if(finger != null)
+                {
+                    var finger_id = finger.getFingerId();
+                    //predicate to remove every finger in the list except from chosen finger
+                    fingers.RemoveAll(Finger => Finger.getFingerId() != finger_id);
+                }
 
-                //predicate to remove every finger in the list except from chosen finger
-                fingers.RemoveAll(Finger => Finger.getFingerId() != finger_id);
 
                 //loop to draw the chosen circle again 
                 for (int circle = 0; circle < 1; circle++)
                 {
-                    float radius = baseRadius * (circle + t);
+                    if(finger != null)
+                    {
+                        float radius = baseRadius * (circle + t);
 
-                    paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
-                    paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
-                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                        paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
+                        paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
+                        canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
 
-                    canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                        canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                    }
                 }
             }
             }
-            }
+        }
     }
 
 

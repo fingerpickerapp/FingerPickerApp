@@ -1000,11 +1000,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
+      "projectUniqueName": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
       "projectName": "FingerPickerApp.iOS",
-      "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
+      "projectPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/FingerPickerApp.iOS.csproj",
       "packagesPath": "/Users/qasimak/.nuget/packages/",
-      "outputPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/",
+      "outputPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1019,8 +1019,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
-              "projectPath": "/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
+            "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj": {
+              "projectPath": "/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/FingerPickerApp.csproj"
             }
           }
         }

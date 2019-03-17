@@ -21,3 +21,15 @@
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.dll
 /Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.pdb
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.csproj.CoreCompileInputs.cache
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.AssemblyInfoInputs.cache
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.AssemblyInfo.cs
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.deps.json
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.dll
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.pdb
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.csprojAssemblyReference.cache
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.dll
+/Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.pdb

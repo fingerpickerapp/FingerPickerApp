@@ -20,5 +20,5 @@ AndroidCreatePackagePerAbi=
 OS=Unix
 DesignTimeBuild=
 AndroidIncludeDebugSymbols=True
-AdbTarget=-s 10.182.45.172:5555
+AdbTarget=-s 10.182.36.201:5555
 AdbOptions=

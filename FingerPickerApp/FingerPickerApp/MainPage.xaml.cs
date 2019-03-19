@@ -119,8 +119,8 @@ namespace FingerPickerApp
                         choose.Start();
                     }
 
-                       var duration = TimeSpan.FromSeconds(0.5);
-                       Vibration.Vibrate(duration);
+                      // var duration = TimeSpan.FromSeconds(0.5);
+                       //Vibration.Vibrate(duration);
 
 
                     /*Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
@@ -190,6 +190,7 @@ namespace FingerPickerApp
             SKCanvas canvas = surface.Canvas;
 
             canvas.Clear();
+            
             SKPoint center = new SKPoint(info.Width / 2, info.Height / 2);
             float baseRadius = Math.Min(info.Width, info.Height) / 12;
 
@@ -218,6 +219,10 @@ namespace FingerPickerApp
             {
                 //var duration = TimeSpan.FromSeconds(0.5);
                 Vibration.Vibrate();
+                var duration = TimeSpan.FromSeconds(0.50);
+                Vibration.Vibrate(duration);
+                Vibration.Cancel();
+
                 //after 6 seconds clear canvas
                 canvas.Clear();
                 //randoml choose a finger from list
@@ -253,6 +258,7 @@ namespace FingerPickerApp
                     }
 
                 }
+
             }
         }
     }

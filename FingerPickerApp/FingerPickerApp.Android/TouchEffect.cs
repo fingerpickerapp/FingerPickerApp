@@ -91,9 +91,7 @@ namespace TouchTracking.Droid
 
                     capture = libTouchEffect.Capture;
                    
-                        // Or use specified time
-                        var duration = TimeSpan.FromSeconds(0.5);
-                        Vibration.Vibrate(duration);
+                     
                    
                     break;
 

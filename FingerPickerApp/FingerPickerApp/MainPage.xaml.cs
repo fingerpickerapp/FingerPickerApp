@@ -71,7 +71,7 @@ namespace FingerPickerApp
             stopwatch.Start();
 
             //timer starts for finger choosing
-            choose.Start();
+            //choose.Start();
 
             Device.StartTimer(TimeSpan.FromMilliseconds(20), () =>
             {
@@ -91,7 +91,7 @@ namespace FingerPickerApp
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
-           
+
             //******To Do List******//
             Console.WriteLine(args.Id);
             //When a finger is removed- remove touch
@@ -110,9 +110,18 @@ namespace FingerPickerApp
             {
 
                 case TouchActionType.Pressed:
+                    choose.Reset();
+                    Console.WriteLine("I am running");
+                    Console.Write("secs=="+a);
                     //**Sometimes same id's are assigned - checked this on Omar's phone and this then messes up when a finger is chosen**//
-                    Finger finger = new Finger((int) args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
+                    Finger finger = new Finger((int)args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
                     fingers.Add(finger);
+
+                    if(fingers.Count >= 2)
+                    {
+                        choose.Start();
+                    }
+
 
                     /*Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
                     Console.WriteLine("ARGS.ID = " + args.Id);
@@ -142,12 +151,12 @@ namespace FingerPickerApp
 
                 case TouchActionType.Moved:
 
-                    Console.Write("move args = ");
-                    Console.WriteLine(args.Id);
+
+                    Console.Write("secs==" + a);
 
                     int index = fingers.FindIndex(Finger => Finger.getFingerId() == args.Id);
 
-                    if(index == args.Id)
+                    if (index == args.Id)
                     {
                         fingers[index].setFingerX(args.LocationX);
                         fingers[index].setFingerY(args.LocationY);
@@ -186,11 +195,11 @@ namespace FingerPickerApp
 
             foreach (Finger finger in fingers)
             {
-                if(finger != null)
+                if (finger != null)
                 {
                     for (int circle = 0; circle < 1; circle++)
                     {
-                        float radius = baseRadius * (circle + t);
+                        float radius = (baseRadius * (circle + t))*2;
 
                         paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
                         paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
@@ -204,43 +213,46 @@ namespace FingerPickerApp
             }
 
             //   Console.WriteLine(t);
-
             //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
-            if (a>=5.999999)
+            if (a >= 3)
             {
+
                 //after 6 seconds clear canvas
                 canvas.Clear();
                 //randoml choose a finger from list
-                int r = random.Next(fingers.Count);
 
-                var finger = fingers[r];
-                //get the finger id of the randomly chosen finger
-                if(finger != null)
-                {
-                    var finger_id = finger.getFingerId();
-                    //predicate to remove every finger in the list except from chosen finger
-                    fingers.RemoveAll(Finger => Finger.getFingerId() != finger_id);
-                }
-
-
-                //loop to draw the chosen circle again 
-                for (int circle = 0; circle < 1; circle++)
-                {
-                    if(finger != null)
+                if (fingers.Count >= 1) {
+                    int r = random.Next(fingers.Count);
+                    var finger = fingers[r];
+                    Console.WriteLine(finger);
+                    //get the finger id of the randomly chosen finger
+                    if (finger != null)
                     {
-                        float radius = baseRadius * (circle + t);
+                        var finger_id = finger.getFingerId();
+                        //predicate to remove every finger in the list except from chosen finger
+                        fingers.RemoveAll(Finger => Finger.getFingerId() != finger_id);
+                    }
+                    
+                    //loop to draw the chosen circle again 
+                    for (int circle = 0; circle < 1; circle++)
+                    {
+                        if (finger != null)
+                        {
+                            float radius = (baseRadius * (circle + t))*2;
 
-                        paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
-                        paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
-                        canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                            paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
+                            paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
+                            canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
 
-                        canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                            canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
+                        }
                     }
                 }
             }
-            }
         }
-  }
+    }
+    }
+
 
 
 

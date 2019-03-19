@@ -33,3 +33,15 @@
 /Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.dll
 /Users/qasimak/Documents/OneDrive/GithubProject/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.pdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.deps.json
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/bin/Debug/netstandard2.0/FingerPickerApp.pdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.csprojAssemblyReference.cache
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.csproj.CoreCompileInputs.cache
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.AssemblyInfoInputs.cache
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.AssemblyInfo.cs
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.pdb

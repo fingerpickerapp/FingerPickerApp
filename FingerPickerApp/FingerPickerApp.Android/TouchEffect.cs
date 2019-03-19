@@ -18,8 +18,6 @@ namespace TouchTracking.Droid
         Element formsElement;
         TouchTracking.TouchEffect libTouchEffect;
         bool capture;
-        //Func<double, double> fromPixels;
-        //int[] twoIntArray = new int[2];
         float locationX;
         float locationY;
 
@@ -42,9 +40,6 @@ namespace TouchTracking.Droid
                 formsElement = Element;
 
                 libTouchEffect = touchEffect;
-
-                // Save fromPixels function
-                //fromPixels = view.Context.FromPixels;
 
                 // Set event handler on View
                 view.Touch += OnTouch;
@@ -69,8 +64,6 @@ namespace TouchTracking.Droid
             // Get the pointer index
             int pointerIndex = motionEvent.ActionIndex;
 
-            //Console.WriteLine("POINTER INDEX = " + pointerIndex);
-            //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< pointerIndex = " + pointerIndex );
             // Get the id that identifies a finger over the course of its progress
             int id = motionEvent.GetPointerId(pointerIndex);
 
@@ -78,10 +71,6 @@ namespace TouchTracking.Droid
 
             locationX = motionEvent.GetX(pointerIndex);
             locationY = motionEvent.GetY(pointerIndex);
-            /*senderView.GetLocationOnScreen(twoIntArray);
-            Point screenPointerCoords = new Point(twoIntArray[0] + motionEvent.GetX(pointerIndex),
-                                                  twoIntArray[1] + motionEvent.GetY(pointerIndex))*/
-
 
             // Use ActionMasked here rather than Action to reduce the number of possibilities
             // when the screen is tapped, this line of code runs
@@ -89,6 +78,9 @@ namespace TouchTracking.Droid
             {
                 case MotionEventActions.Down:
                 case MotionEventActions.PointerDown: // checks for pointer down
+
+                    Console.Write("what is this? = ");
+                    Console.WriteLine(this);
                     FireEvent(this, id, TouchActionType.Pressed, locationX, locationY, true);
 
                     idToEffectDictionary.Add(id, this);
@@ -105,23 +97,18 @@ namespace TouchTracking.Droid
                         // this stores the pointer id of eadh finger until removed from the screen
                         // when the pointer is removed another finger is placed, the new finger takes the index
                         // number of the previous finger.
-                        id = motionEvent.GetPointerId(pointerIndex);
-
-                        Console.WriteLine("ID = " + id);
-
+                        /*id = motionEvent.GetPointerId(pointerIndex);
+                        locationX = motionEvent.GetX(pointerIndex);
+                        locationY = motionEvent.GetY(pointerIndex);*/
+                        id = pointerIndex;
+                        locationX = motionEvent.GetX(pointerIndex);
+                        locationY = motionEvent.GetY(pointerIndex);
                         if (capture)
                         {
-                            //senderView.GetLocationOnScreen(twoIntArray);
-
-                            /*screenPointerCoords = new Point(twoIntArray[0] + motionEvent.GetX(pointerIndex),
-                                                            twoIntArray[1] + motionEvent.GetY(pointerIndex));*/
-
-                           FireEvent(this, id, TouchActionType.Moved, locationX, locationY, true);
+                            FireEvent(this, id, TouchActionType.Moved, locationX, locationY, true);
                         }
                         else
                         {
-                            //CheckForBoundaryHop(id, screenPointerCoords);
-
                             if (idToEffectDictionary[id] != null)
                             {
                                 FireEvent(idToEffectDictionary[id], id, TouchActionType.Moved, locationX, locationY, true);
@@ -139,23 +126,16 @@ namespace TouchTracking.Droid
                     else
                     {
                         //CheckForBoundaryHop(id, screenPointerCoords);
-
                         if (idToEffectDictionary[id] != null)
                         {
                             FireEvent(idToEffectDictionary[id], id, TouchActionType.Released, locationX, locationY, false);
                         }
                     }
                     idToEffectDictionary.Remove(id);
-                    Console.WriteLine("This is id TOEFFECTDICTIONARY = " + idToEffectDictionary.Count);
-                    for(int i = 0; i < idToEffectDictionary.Count; i ++)
-                    {
-                        Console.WriteLine("This is id TOEFFECTDICTIONARY = " + idToEffectDictionary);
-                    }
-
                     break;
 
                 case MotionEventActions.Cancel:
-                    /*if (capture)
+                    if (capture)
                     {
                         FireEvent(this, id, TouchActionType.Cancelled, locationX, locationY, false);
                     }
@@ -166,7 +146,7 @@ namespace TouchTracking.Droid
                             FireEvent(idToEffectDictionary[id], id, TouchActionType.Cancelled, locationX, locationY, false);
                         }
                     }
-                    idToEffectDictionary.Remove(id);*/
+                    idToEffectDictionary.Remove(id);
                     break;
             }
         }
@@ -214,15 +194,10 @@ namespace TouchTracking.Droid
             Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
             // Get the location of the pointer within the view
-            /*touchEffect.view.GetLocationOnScreen(twoIntArray);
-            double x = pointerLocation.X - twoIntArray[0];
-            double y = pointerLocation.Y - twoIntArray[1];
-            Point point = new Point(fromPixels(x), fromPixels(y));*/
-
+            // touchEffect.view.GetLocationOnScreen(twoIntArray);
             // Call the method
             // THIS IS SENDING THE TOUCH TO THE TOUCH EVENT ARGS
-            onTouchAction(touchEffect.formsElement,
-                new TouchActionEventArgs(id, actionType, locationX, locationY, isInContact));
+            onTouchAction(touchEffect.formsElement, new TouchActionEventArgs(id, actionType, locationX, locationY, isInContact));
         }
     }
 }

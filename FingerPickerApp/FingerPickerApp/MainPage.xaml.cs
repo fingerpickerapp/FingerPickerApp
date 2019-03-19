@@ -35,7 +35,7 @@ namespace FingerPickerApp
         // floats declared
         float t;
         float a;
-        int index;
+        //int index;
 
 
         // paths declared
@@ -91,9 +91,9 @@ namespace FingerPickerApp
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
-
+           
             //******To Do List******//
-
+            Console.WriteLine(args.Id);
             //When a finger is removed- remove touch
             //circle moves when finger moves - update x/y positions of finger
             //check id issue
@@ -101,7 +101,7 @@ namespace FingerPickerApp
 
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 4");
             //choose random 3 numbers to assign for colour
-            //**If you's can find a better way to assign colours- go for it, I did this in 10mins//**
+            //**If you's can find a better way to assign colours- go for it, I did this in 10mins//*
             int randomNumber = random.Next(70, 255);
             int randomNumber1 = random.Next(70, 255);
             int randomNumber2 = random.Next(70, 255);
@@ -111,12 +111,13 @@ namespace FingerPickerApp
 
                 case TouchActionType.Pressed:
                     //**Sometimes same id's are assigned - checked this on Omar's phone and this then messes up when a finger is chosen**//
-                    index = (int)args.Id;
-                    Finger finger = new Finger(index, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
-                    Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
+                    Finger finger = new Finger((int) args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
+                    fingers.Add(finger);
+
+                    /*Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
                     Console.WriteLine("ARGS.ID = " + args.Id);
-                    Console.WriteLine("THIS FINGER ID = " + index);
-                    if(fingers.Count > index)
+                    Console.WriteLine("THIS FINGER ID = " + index);*/
+                    /*if(fingers.Count > index)
                     {
                         if (fingers[index] == null)
                         {
@@ -126,51 +127,49 @@ namespace FingerPickerApp
                         {
                             fingers.Add(finger);
                         }
-
                     }
                     else
                     {
                         fingers.Add(finger);
-                    }
+                    }*/
 
-                    Console.WriteLine(args.IsInContact);
+                    //Console.WriteLine(args.IsInContact);
                     canvasView.InvalidateSurface();
-                    Console.WriteLine(args.Id);
-                    //  Console.WriteLine((int)args.Id+"fingerX = " + finger.getFingerX() + " fingerY = " + finger.getFingerY());
-                    //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< args.id = " + args.Id);
+                    // Console.WriteLine(args.Id);
+                    // Console.WriteLine((int)args.Id+"fingerX = " + finger.getFingerX() + " fingerY = " + finger.getFingerY());
+                    // Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< args.id = " + args.Id);
                     break;
 
                 case TouchActionType.Moved:
 
+                    Console.Write("move args = ");
+                    Console.WriteLine(args.Id);
 
-                    /*if (inProgressPaths.ContainsKey(args.Id))
+                    int index = fingers.FindIndex(Finger => Finger.getFingerId() == args.Id);
+
+                    if(index == args.Id)
                     {
-                        SKPath path = inProgressPaths[args.Id];
-                        // path.LineTo(ConvertToPixel(args.Location));
-                        //   Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< location" + args.Location.X);
-                        // Console.WriteLine("This is what locations consists of = <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" + args.Location);
+                        fingers[index].setFingerX(args.LocationX);
+                        fingers[index].setFingerY(args.LocationY);
+                    }
 
-                        canvasView.InvalidateSurface();
-                    }*/
                     break;
 
                 case TouchActionType.Released:
                     Console.WriteLine(args.Id);
 
-                    index = (int) args.Id;
-                    fingers[index] = null;
-                    for (int i = 0; i < fingers.Count; i++)
-                    {
-                       
-                    }
+                    fingers.RemoveAll(Finger => Finger.getFingerId() == args.Id);
+
                     break;
 
                 case TouchActionType.Cancelled:
+
                     /*if (inProgressPaths.ContainsKey(args.Id))
                     {
                         inProgressPaths.Remove(args.Id);
                         canvasView.InvalidateSurface();
                     }*/
+
                     break;
             }
         }
@@ -209,7 +208,6 @@ namespace FingerPickerApp
             //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
             if (a>=5.999999)
             {
-
                 //after 6 seconds clear canvas
                 canvas.Clear();
                 //randoml choose a finger from list
@@ -242,7 +240,7 @@ namespace FingerPickerApp
             }
             }
         }
-    }
+  }
 
 
 

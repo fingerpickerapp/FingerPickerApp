@@ -8,7 +8,6 @@ namespace TouchTracking
         public TouchActionEventArgs(long id, TouchActionType type, float locationX, float locationY, bool isInContact)
         {
             //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 5");
-
             Id = id;
             Type = type;
             LocationX = locationX;

@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{ABD89025-F853-4F08-85F3-C67AD2D8ABE0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/MainPage.xaml.cs">
     <Files>
-      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="116" Column="21" />
-      <File FileName="FingerPickerApp.Android/TouchEffect.cs" Line="133" Column="44" />
+      <File FileName="FingerPickerApp.Android/TouchEffect.cs" Line="103" Column="43" />
+      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="215" Column="1" />
+      <File FileName="FingerPickerApp/TouchActionEventArgs.cs" Line="6" Column="38" />
+      <File FileName="FingerPickerApp/TouchActionEventHandler.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp/TouchActionType.cs" Line="11" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FingerPickerApp" expanded="True">
             <Node name="FingerPickerApp" expanded="True">
-              <Node name="App.xaml" expanded="True" />
               <Node name="MainPage.xaml" expanded="True">
                 <Node name="MainPage.xaml.cs" selected="True" />
               </Node>
             </Node>
-            <Node name="FingerPickerApp.Android" expanded="True" />
           </Node>
-          <Node name="FingerPickerApp" expanded="True" />
         </State>
       </Pad>
     </Pads>

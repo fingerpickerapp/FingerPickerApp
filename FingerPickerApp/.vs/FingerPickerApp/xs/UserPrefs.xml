@@ -1,9 +1,14 @@
 ﻿<Properties StartupConfiguration="{ABD89025-F853-4F08-85F3-C67AD2D8ABE0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/MainPage.xaml.cs">
     <Files>
-      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="108" Column="13" />
-      <File FileName="FingerPickerApp.Android/TouchEffect.cs" Line="102" Column="41" />
+      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="247" Column="24" />
+      <File FileName="FingerPickerApp.Android/TouchEffect.cs" Line="99" Column="1" />
       <File FileName="FingerPickerApp/Finger.cs" Line="23" Column="10" />
+      <File FileName="FingerPickerApp.Android/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp.Android/Properties/AndroidManifest.xml" Line="5" Column="54" />
+      <File FileName="FingerPickerApp/TouchEffect.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp.Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="../../../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1327" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

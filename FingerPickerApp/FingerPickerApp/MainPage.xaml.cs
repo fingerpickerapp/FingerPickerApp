@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 using TouchTracking;
 
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
-using System.IO;
-using FingerPickerApp;
 using System.Diagnostics;
-using System.Threading.Tasks;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace FingerPickerApp
 {
@@ -122,6 +119,9 @@ namespace FingerPickerApp
                         choose.Start();
                     }
 
+                       var duration = TimeSpan.FromSeconds(0.5);
+                       Vibration.Vibrate(duration);
+
 
                     /*Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
                     Console.WriteLine("ARGS.ID = " + args.Id);
@@ -216,7 +216,8 @@ namespace FingerPickerApp
             //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
             if (a >= 3)
             {
-
+                //var duration = TimeSpan.FromSeconds(0.5);
+                Vibration.Vibrate();
                 //after 6 seconds clear canvas
                 canvas.Clear();
                 //randoml choose a finger from list
@@ -246,7 +247,11 @@ namespace FingerPickerApp
 
                             canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
                         }
+                     
+
+
                     }
+
                 }
             }
         }

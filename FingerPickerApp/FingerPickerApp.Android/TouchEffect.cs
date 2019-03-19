@@ -6,6 +6,10 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 using Android.Views;
+using Android.OS;
+using System.Runtime.Remoting.Contexts;
+using Android.Content;
+using Xamarin.Essentials;
 
 [assembly: ResolutionGroupName("XamarinDocs")]
 [assembly: ExportEffect(typeof(TouchTracking.Droid.TouchEffect), "TouchEffect")]
@@ -86,12 +90,17 @@ namespace TouchTracking.Droid
                     idToEffectDictionary.Add(id, this);
 
                     capture = libTouchEffect.Capture;
+                   
+                        // Or use specified time
+                        var duration = TimeSpan.FromSeconds(0.5);
+                        Vibration.Vibrate(duration);
+                   
                     break;
 
                case MotionEventActions.Move:
                     // Multiple Move events are bundled, so handle them in a loop
 
-                    // this line of code runs when the finger is moved.
+                    // this line of code runs when the finger is moved.ss
                     for (pointerIndex = 0; pointerIndex < motionEvent.PointerCount; pointerIndex++)
                     {
                         // this stores the pointer id of eadh finger until removed from the screen

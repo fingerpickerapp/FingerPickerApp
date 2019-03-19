@@ -174,5 +174,7 @@
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Mono.Android.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Forms.Core.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Forms.Xaml.pdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/bin/Debug/Xamarin.Essentials.dll.mdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/FormsViewGroup.dll.mdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Essentials.dll.mdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.dll.mdb

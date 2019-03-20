@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        }
+      },
       "SkiaSharp/1.68.0": {
         "type": "package",
         "compile": {
@@ -68,6 +79,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -210,8 +232,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
           "SkiaSharp": "1.68.0",
           "SkiaSharp.Views.Forms": "1.68.0",
+          "Xam.Plugin.SimpleAudioPlayer": "1.3.0",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.3.0.967583"
         },
@@ -224,6 +248,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        }
+      },
       "SkiaSharp/1.68.0": {
         "type": "package",
         "compile": {
@@ -268,6 +303,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -410,8 +456,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
           "SkiaSharp": "1.68.0",
           "SkiaSharp.Views.Forms": "1.68.0",
+          "Xam.Plugin.SimpleAudioPlayer": "1.3.0",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.3.0.967583"
         },
@@ -424,6 +472,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        }
+      },
       "SkiaSharp/1.68.0": {
         "type": "package",
         "compile": {
@@ -471,6 +530,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -613,8 +683,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
           "SkiaSharp": "1.68.0",
           "SkiaSharp.Views.Forms": "1.68.0",
+          "Xam.Plugin.SimpleAudioPlayer": "1.3.0",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.3.0.967583"
         },
@@ -627,6 +699,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Plugin.MediaManager/0.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.MediaManager.dll": {}
+        }
+      },
       "SkiaSharp/1.68.0": {
         "type": "package",
         "compile": {
@@ -674,6 +757,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -816,8 +910,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.MediaManager": "0.4.5",
           "SkiaSharp": "1.68.0",
           "SkiaSharp.Views.Forms": "1.68.0",
+          "Xam.Plugin.SimpleAudioPlayer": "1.3.0",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.3.0.967583"
         },
@@ -831,6 +927,40 @@
     }
   },
   "libraries": {
+    "Plugin.MediaManager/0.4.5": {
+      "sha512": "uvAKzT4XZmwJkXPWgImQkf0gD9Gf0vwBc5qkf4ldX5cOOc0GE2tOXFDeYDMMIj4tvRwHqBU4mL1ch3zJLeBelA==",
+      "type": "package",
+      "path": "plugin.mediamanager/0.4.5",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid/Plugin.MediaManager.Abstractions.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.Abstractions.xml",
+        "lib/MonoAndroid/Plugin.MediaManager.dll",
+        "lib/MonoAndroid/Plugin.MediaManager.xml",
+        "lib/Xamarin.Mac/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.Mac/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.Mac/Plugin.MediaManager.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.dll",
+        "lib/Xamarin.iOS10/Plugin.MediaManager.xml",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.Abstractions.dll",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.Abstractions.xml",
+        "lib/Xamarin.tvOS/Plugin.MediaManager.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.xml",
+        "lib/uap10.0/Plugin.MediaManager.Abstractions.dll",
+        "lib/uap10.0/Plugin.MediaManager.Abstractions.xml",
+        "lib/uap10.0/Plugin.MediaManager.XML",
+        "lib/uap10.0/Plugin.MediaManager.dll",
+        "lib/uap10.0/Plugin.MediaManager.pdb",
+        "lib/uap10.0/Properties/Plugin.MediaManager.UWP.rd.xml",
+        "plugin.mediamanager.0.4.5.nupkg.sha512",
+        "plugin.mediamanager.nuspec"
+      ]
+    },
     "SkiaSharp/1.68.0": {
       "sha512": "F8Nh6ws9WGVCddQb509Xl4lCIOu786Oc27t9LxPbuPZU7Olw6jVO2X6iqmHrwY+MZQXQXD4DeK5LU8vfiNwTCg==",
       "type": "package",
@@ -979,6 +1109,49 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+      "sha512": "AbfKh5skVRtJn0ckRj1VDPOTf5bsNyTbfDL/bFiAI3vaq3Y/zgLvlo3Thfwv2V92P4e/PhPCkHTX8UPVyQTqJQ==",
+      "type": "package",
+      "path": "xam.plugin.simpleaudioplayer/1.3.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.XML",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll.mdb",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pri",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.XML",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.xml",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/net45/Plugin.SimpleAudioPlayer.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.deps.json",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.pdb",
+        "xam.plugin.simpleaudioplayer.1.3.0.nupkg.sha512",
+        "xam.plugin.simpleaudioplayer.nuspec"
       ]
     },
     "Xamarin.Essentials/1.1.0": {

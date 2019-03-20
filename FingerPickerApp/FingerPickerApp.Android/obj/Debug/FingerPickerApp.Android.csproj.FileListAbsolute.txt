@@ -169,12 +169,16 @@
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/R.txt
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/uploadflags.txt
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/bin/Debug/Mono.Android.pdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/bin/Debug/Plugin.SimpleAudioPlayer.Abstractions.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/FingerPickerApp.Android.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/FingerPickerApp.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Mono.Android.pdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Plugin.SimpleAudioPlayer.Abstractions.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Forms.Core.pdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Forms.Xaml.pdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/bin/Debug/Plugin.SimpleAudioPlayer.dll.mdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/bin/Debug/Xamarin.Essentials.dll.mdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/FormsViewGroup.dll.mdb
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Plugin.SimpleAudioPlayer.dll.mdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Essentials.dll.mdb
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.dll.mdb

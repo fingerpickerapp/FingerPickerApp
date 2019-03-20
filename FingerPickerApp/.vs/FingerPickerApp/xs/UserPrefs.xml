@@ -1,20 +1,17 @@
 ﻿<Properties StartupConfiguration="{ABD89025-F853-4F08-85F3-C67AD2D8ABE0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/MainPage.xaml.cs">
     <Files>
-      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="247" Column="24" />
-      <File FileName="FingerPickerApp.Android/TouchEffect.cs" Line="99" Column="1" />
-      <File FileName="FingerPickerApp/Finger.cs" Line="23" Column="10" />
-      <File FileName="FingerPickerApp.Android/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="FingerPickerApp.Android/Properties/AndroidManifest.xml" Line="5" Column="54" />
-      <File FileName="FingerPickerApp/TouchEffect.cs" Line="1" Column="1" />
-      <File FileName="FingerPickerApp.Android/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="../../../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="1327" Column="2" />
+      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="62" Column="44" />
+      <File FileName="FingerPickerApp/Finger.cs" Line="1" Column="1" />
+      <File FileName="FingerPickerApp.iOS/TouchRecognizer.cs" Line="49" Column="18" />
+      <File FileName="FingerPickerApp/App.xaml" Line="1" Column="1" />
+      <File FileName="FingerPickerApp/MainPage.xaml" Line="16" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.10.182.45.172:5555" />
-  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1083DC9D-877D-43B4-B0BA-BF66E2424E9C" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Nexus_5X_API_27" />
+  <MonoDevelop.Ide.ItemProperties.FingerPickerApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DDF0E9F5-9185-48E9-934A-24046CFB30EF" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,5 +1,9 @@
 FingerPickerApp
 FormsViewGroup
+Plugin.MediaManager.Abstractions
+Plugin.MediaManager
+Plugin.SimpleAudioPlayer.Abstractions
+Plugin.SimpleAudioPlayer
 SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms
@@ -30,3 +34,4 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
+System.Resources.ResourceManager

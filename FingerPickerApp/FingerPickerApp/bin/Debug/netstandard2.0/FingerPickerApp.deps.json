@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "8a28fb3b434e927bb00e8f0c57188d3cc85d106e"
+    "signature": "3224d3a4d180e8c34ded102c96e5a784c215fab9"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,8 +10,10 @@
       "FingerPickerApp/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
+          "Plugin.MediaManager": "0.4.5",
           "SkiaSharp": "1.68.0",
           "SkiaSharp.Views.Forms": "1.68.0",
+          "Xam.Plugin.SimpleAudioPlayer": "1.3.0",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "3.3.0.967583"
         },
@@ -23,6 +25,18 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Plugin.MediaManager/0.4.5": {
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Plugin.MediaManager.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "SkiaSharp/1.68.0": {
@@ -50,6 +64,21 @@
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
             "assemblyVersion": "4.1.4.0",
             "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -102,6 +131,13 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
+    "Plugin.MediaManager/0.4.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uvAKzT4XZmwJkXPWgImQkf0gD9Gf0vwBc5qkf4ldX5cOOc0GE2tOXFDeYDMMIj4tvRwHqBU4mL1ch3zJLeBelA==",
+      "path": "plugin.mediamanager/0.4.5",
+      "hashPath": "plugin.mediamanager.0.4.5.nupkg.sha512"
+    },
     "SkiaSharp/1.68.0": {
       "type": "package",
       "serviceable": true,
@@ -122,6 +158,13 @@
       "sha512": "sha512-nATsBTD2CKr4AYN6eRszhX4sptImWmBJwB/U6XKCWWfnCcrTBw8XSCm3QA9gjppkHTr8OkXUY21MR91D3QZXsw==",
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AbfKh5skVRtJn0ckRj1VDPOTf5bsNyTbfDL/bFiAI3vaq3Y/zgLvlo3Thfwv2V92P4e/PhPCkHTX8UPVyQTqJQ==",
+      "path": "xam.plugin.simpleaudioplayer/1.3.0",
+      "hashPath": "xam.plugin.simpleaudioplayer.1.3.0.nupkg.sha512"
     },
     "Xamarin.Essentials/1.1.0": {
       "type": "package",

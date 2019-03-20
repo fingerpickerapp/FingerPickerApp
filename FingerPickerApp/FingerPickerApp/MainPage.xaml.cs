@@ -9,6 +9,9 @@ using TouchTracking;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System.Diagnostics;
+using Plugin.MediaManager;
+using Plugin.SimpleAudioPlayer;
+using System.IO;
 
 namespace FingerPickerApp
 {
@@ -34,15 +37,14 @@ namespace FingerPickerApp
         float a;
         //int index;
 
+        int randomNumber;
+        int randomNumber1;
+        int randomNumber2;
 
-        // paths declared
-        //Dictionary<long, SKPath> inProgressPaths = new Dictionary<long, SKPath>();
-        // completed paths declared
-        //List<SKPath> completedPaths = new List<SKPath>();
         // a list of finger objects declared
         List<Finger> fingers = new List<Finger>();
 
-        // paing declared with red colour
+        // painting declared with red colour
         SKPaint paint = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
@@ -51,6 +53,19 @@ namespace FingerPickerApp
             StrokeCap = SKStrokeCap.Round,
             StrokeJoin = SKStrokeJoin.Round
         };
+
+        // painting declared with black fill colour
+
+        SKPaint black = new SKPaint
+        {
+            //Style = SKPaintStyle.Stroke,
+            Style = SKPaintStyle.Fill,
+            Color = SKColors.Black,
+            StrokeWidth = 10,
+            StrokeCap = SKStrokeCap.Round,
+            StrokeJoin = SKStrokeJoin.Round
+
+    };
 
         public MainPage()
         {
@@ -89,64 +104,30 @@ namespace FingerPickerApp
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
         {
 
-            //******To Do List******//
-            Console.WriteLine(args.Id);
-            //When a finger is removed- remove touch
-            //circle moves when finger moves - update x/y positions of finger
-            //check id issue
-            //Restart timer for finger choosing everytime someone touches or removes their finger
-
-            //Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Run no = 4");
-            //choose random 3 numbers to assign for colour
-            //**If you's can find a better way to assign colours- go for it, I did this in 10mins//*
-            int randomNumber = random.Next(70, 255);
-            int randomNumber1 = random.Next(70, 255);
-            int randomNumber2 = random.Next(70, 255);
+            randomNumber = random.Next(70, 255);
+            randomNumber1 = random.Next(70, 255);
+            randomNumber2 = random.Next(70, 255);
 
             switch (args.Type)
             {
 
                 case TouchActionType.Pressed:
                     choose.Reset();
+                    
                     Console.WriteLine("I am running");
                     Console.Write("secs=="+a);
-                    //**Sometimes same id's are assigned - checked this on Omar's phone and this then messes up when a finger is chosen**//
                     Finger finger = new Finger((int)args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
                     fingers.Add(finger);
 
-                    if(fingers.Count >= 2)
+
+                    if (fingers.Count >= 2)
                     {
                         choose.Start();
                     }
 
-                      // var duration = TimeSpan.FromSeconds(0.5);
-                       //Vibration.Vibrate(duration);
-
-
-                    /*Console.WriteLine("FINGERS.COUNT = " + fingers.Count);
-                    Console.WriteLine("ARGS.ID = " + args.Id);
-                    Console.WriteLine("THIS FINGER ID = " + index);*/
-                    /*if(fingers.Count > index)
-                    {
-                        if (fingers[index] == null)
-                        {
-                            fingers[index] = finger;
-                        }
-                        else
-                        {
-                            fingers.Add(finger);
-                        }
-                    }
-                    else
-                    {
-                        fingers.Add(finger);
-                    }*/
-
-                    //Console.WriteLine(args.IsInContact);
+                      
                     canvasView.InvalidateSurface();
-                    // Console.WriteLine(args.Id);
-                    // Console.WriteLine((int)args.Id+"fingerX = " + finger.getFingerX() + " fingerY = " + finger.getFingerY());
-                    // Console.WriteLine("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< args.id = " + args.Id);
+                  
                     break;
 
                 case TouchActionType.Moved:
@@ -172,12 +153,6 @@ namespace FingerPickerApp
                     break;
 
                 case TouchActionType.Cancelled:
-
-                    /*if (inProgressPaths.ContainsKey(args.Id))
-                    {
-                        inProgressPaths.Remove(args.Id);
-                        canvasView.InvalidateSurface();
-                    }*/
 
                     break;
             }
@@ -213,15 +188,17 @@ namespace FingerPickerApp
                 }
             }
 
-            //   Console.WriteLine(t);
-            //*** This works fine but crashes sometimes when 2 same id's are assigned to a finger**//
+           
             if (a >= 3)
             {
                 //var duration = TimeSpan.FromSeconds(0.5);
+
                 Vibration.Vibrate();
                 var duration = TimeSpan.FromSeconds(0.50);
                 Vibration.Vibrate(duration);
                 Vibration.Cancel();
+
+
 
                 //after 6 seconds clear canvas
                 canvas.Clear();
@@ -246,10 +223,14 @@ namespace FingerPickerApp
                         {
                             float radius = (baseRadius * (circle + t))*2;
 
+                            //change the background colour
+                            canvas.DrawColor(new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1()));
+                            black.Color = new SKColor((byte)0, (byte)0, (byte)0);
+                            canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 200, black);
+
                             paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
                             paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
                             canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
-
                             canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
                         }
                      

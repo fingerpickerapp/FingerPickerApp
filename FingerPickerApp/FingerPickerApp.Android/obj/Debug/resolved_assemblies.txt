@@ -4,6 +4,10 @@
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Java.Interop.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Mono.Android.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/mscorlib.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Plugin.MediaManager.Abstractions.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Plugin.MediaManager.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Plugin.SimpleAudioPlayer.Abstractions.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Plugin.SimpleAudioPlayer.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/SkiaSharp.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/SkiaSharp.Views.Android.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/SkiaSharp.Views.Forms.dll
@@ -49,4 +53,13 @@
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.ServiceModel.Internals.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Web.Services.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Runtime.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Resources.ResourceManager.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.ObjectModel.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Threading.Tasks.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Collections.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Runtime.Extensions.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Diagnostics.Debug.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Threading.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.Linq.dll
+/Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/System.IO.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp.Android/obj/Debug/android/assets/Mono.Security.dll

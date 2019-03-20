@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Plugin.MediaManager;
 using Plugin.SimpleAudioPlayer;
 using System.IO;
+using System.Reflection;
 
 namespace FingerPickerApp
 {
@@ -108,6 +109,9 @@ namespace FingerPickerApp
             randomNumber1 = random.Next(70, 255);
             randomNumber2 = random.Next(70, 255);
 
+
+
+
             switch (args.Type)
             {
 
@@ -119,6 +123,7 @@ namespace FingerPickerApp
                     Finger finger = new Finger((int)args.Id, args.LocationX, args.LocationY, randomNumber, randomNumber1, randomNumber2);
                     fingers.Add(finger);
 
+                    playSound(false);
 
                     if (fingers.Count >= 2)
                     {
@@ -188,22 +193,16 @@ namespace FingerPickerApp
                 }
             }
 
-           
             if (a >= 3)
             {
                 //var duration = TimeSpan.FromSeconds(0.5);
-
                 Vibration.Vibrate();
-                var duration = TimeSpan.FromSeconds(0.50);
+                var duration = TimeSpan.FromSeconds(1);
                 Vibration.Vibrate(duration);
-                Vibration.Cancel();
-
-
 
                 //after 6 seconds clear canvas
                 canvas.Clear();
                 //randoml choose a finger from list
-
                 if (fingers.Count >= 1) {
                     int r = random.Next(fingers.Count);
                     var finger = fingers[r];
@@ -214,6 +213,7 @@ namespace FingerPickerApp
                         var finger_id = finger.getFingerId();
                         //predicate to remove every finger in the list except from chosen finger
                         fingers.RemoveAll(Finger => Finger.getFingerId() != finger_id);
+                        playSound(true);
                     }
                     
                     //loop to draw the chosen circle again 
@@ -222,12 +222,11 @@ namespace FingerPickerApp
                         if (finger != null)
                         {
                             float radius = (baseRadius * (circle + t))*2;
-
                             //change the background colour
                             canvas.DrawColor(new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1()));
                             black.Color = new SKColor((byte)0, (byte)0, (byte)0);
                             canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 200, black);
-
+                            Vibration.Cancel();
                             paint.StrokeWidth = baseRadius / 2 * (circle == 0 ? t : 1);
                             paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
                             canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
@@ -241,6 +240,24 @@ namespace FingerPickerApp
                 }
 
             }
+
+        }
+        public void playSound(bool chosen)
+        {
+            var assembly = typeof(App).GetTypeInfo().Assembly;
+            Stream audioStream;
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+
+            if(chosen)
+            {
+                audioStream = assembly.GetManifestResourceStream("FingerPickerApp." + "chosen.mp3");
+            }
+            else
+            {
+                audioStream = assembly.GetManifestResourceStream("FingerPickerApp." + "pianonote.mp3");
+            }
+            player.Load(audioStream);
+            player.Play();
         }
     }
     }

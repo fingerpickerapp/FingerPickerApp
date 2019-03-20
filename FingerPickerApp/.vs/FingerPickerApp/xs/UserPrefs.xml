@@ -1,12 +1,23 @@
 ﻿<Properties StartupConfiguration="{ABD89025-F853-4F08-85F3-C67AD2D8ABE0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="FingerPickerApp/MainPage.xaml.cs">
     <Files>
-      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="62" Column="44" />
+      <File FileName="FingerPickerApp/MainPage.xaml.cs" Line="62" Column="39" />
       <File FileName="FingerPickerApp/Finger.cs" Line="1" Column="1" />
       <File FileName="FingerPickerApp.iOS/TouchRecognizer.cs" Line="49" Column="18" />
       <File FileName="FingerPickerApp/App.xaml" Line="1" Column="1" />
       <File FileName="FingerPickerApp/MainPage.xaml" Line="16" Column="12" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FingerPickerApp" expanded="True">
+            <Node name="FingerPickerApp" expanded="True">
+              <Node name="MainPage.xaml.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

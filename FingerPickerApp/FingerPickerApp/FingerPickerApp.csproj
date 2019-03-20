@@ -17,4 +17,13 @@
     <PackageReference Include="Plugin.MediaManager" Version="0.4.5" />
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.3.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="beep.mp3" />
+    <None Remove="chosen.mp3" />
+    <None Remove="pianonote.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="chosen.mp3" />
+    <EmbeddedResource Include="pianonote.mp3" />
+  </ItemGroup>
 </Project>

@@ -45,3 +45,4 @@
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.dll
 /Users/Aksa08/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.pdb
+/Users/qasimak/Documents/GitHub/FingerPickerApp/FingerPickerApp/FingerPickerApp/obj/Debug/netstandard2.0/FingerPickerApp.csprojAssemblyReference.cache

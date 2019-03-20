@@ -186,7 +186,6 @@ namespace FingerPickerApp
                         paint.Color = new SKColor((byte)finger.getFingerColour2(), (byte)finger.getFingerColour(), (byte)finger.getFingerColour1());
                         canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), 89, paint);
 
-
                         canvas.DrawCircle((float)finger.getFingerX(), (float)finger.getFingerY(), radius, paint);
 
                     }

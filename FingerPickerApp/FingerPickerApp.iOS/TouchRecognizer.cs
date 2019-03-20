@@ -16,7 +16,8 @@ namespace TouchTracking.iOS
         UIView view;            // iOS UIView 
         TouchTracking.TouchEffect touchEffect;
         bool capture;
-
+        float locationX;
+        float locationY;
         static Dictionary<UIView, TouchRecognizer> viewDictionary = new Dictionary<UIView, TouchRecognizer>();
 
         static Dictionary<long, TouchRecognizer> idToTouchDictionary = new Dictionary<long, TouchRecognizer>();
@@ -69,7 +70,7 @@ namespace TouchTracking.iOS
                 }
                 else
                 {
-                    CheckForBoundaryHop(touch);
+                    //CheckForBoundaryHop(touch);
 
                     if (idToTouchDictionary[id] != null)
                     {
@@ -93,7 +94,7 @@ namespace TouchTracking.iOS
                 }
                 else
                 {
-                    CheckForBoundaryHop(touch);
+                    //CheckForBoundaryHop(touch);
 
                     if (idToTouchDictionary[id] != null)
                     {
@@ -124,7 +125,7 @@ namespace TouchTracking.iOS
             }
         }
 
-        void CheckForBoundaryHop(UITouch touch)
+        /*void CheckForBoundaryHop(UITouch touch)
         {
             long id = touch.Handle.ToInt64();
 
@@ -152,20 +153,22 @@ namespace TouchTracking.iOS
                 }
                 idToTouchDictionary[id] = recognizerHit;
             }
-        }
+        }*/
 
         void FireEvent(TouchRecognizer recognizer, long id, TouchActionType actionType, UITouch touch, bool isInContact)
         {
             // Convert touch location to Xamarin.Forms Point value
-            CGPoint cgPoint = touch.LocationInView(recognizer.View);
-            Point xfPoint = new Point(cgPoint.X, cgPoint.Y);
+            /*CGPoint cgPoint = touch.LocationInView(recognizer.View);
+            Point xfPoint = new Point(cgPoint.X, cgPoint.Y);*/
 
             // Get the method to call for firing events
             Action<Element, TouchActionEventArgs> onTouchAction = recognizer.touchEffect.OnTouchAction;
+            locationX = (float)touch.LocationInView(view).X;
+            locationY = (float)touch.LocationInView(view).Y;
 
             // Call that method
             onTouchAction(recognizer.element,
-                new TouchActionEventArgs(id, actionType, xfPoint, isInContact));
+                new TouchActionEventArgs(id, actionType, locationX, locationY, isInContact));
         }
     }
 }
